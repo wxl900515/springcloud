@@ -23,7 +23,7 @@ public class UserController {
 	@GetMapping("/user/{id}")
 	public User findById(@PathVariable Integer id) {
 		
-		return this.restTemplate.getForObject("http://springcloud_service/"+id, User.class);
+		return this.restTemplate.getForObject("http://springcloud-service/"+id, User.class);
 		
 	}
 	
@@ -31,7 +31,7 @@ public class UserController {
 	@GetMapping("log-user-instance")
 	public void logUserInstance() {
 		
-		ServiceInstance  ss = this.loadBalancerClient.choose("springcloud_service");
+		ServiceInstance  ss = this.loadBalancerClient.choose("springcloud-service");
 		System.out.println(ss.getServiceId());
 		System.out.println(ss.getHost());
 		System.out.println(ss.getPort());
