@@ -2,7 +2,7 @@ server:
   port: 8010  #端口号
 spring:
   application:
-    name: springcloud_customer   #应用名称
+    name: springcloud-customer   #应用名称
   cloud:
     service-registry:
       auto-registration:

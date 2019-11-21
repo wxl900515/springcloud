@@ -2,7 +2,7 @@ server:
   port: 8020  #端口号
 spring:
   application:
-    name: springcloud_service   #应用名称
+    name: springcloud-service   #应用名称
   cloud:
     service-registry:
       auto-registration:
