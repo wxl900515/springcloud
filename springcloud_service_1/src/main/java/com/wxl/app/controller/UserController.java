@@ -17,10 +17,10 @@ public class UserController {
 	@GetMapping("/{id}")
 	public User findById(@PathVariable Integer id) {
 		User us = new User();
-		us.setId(1);
+		us.setId(2);
 		us.setName("李四");
-		us.setAge(18);
-		us.setSex(0);
+		us.setAge(20);
+		us.setSex(1);
 		return us;
 	}
 }
