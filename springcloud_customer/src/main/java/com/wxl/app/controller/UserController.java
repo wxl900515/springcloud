@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.wxl.app.entity.User;
+import com.wxl.app.service.UserService;
 
 @RestController
 public class UserController {
@@ -19,11 +20,21 @@ public class UserController {
 	
 	@Autowired
 	private LoadBalancerClient   loadBalancerClient;
+	@Autowired
+	private UserService   userService;
 	
 	@GetMapping("/user/{id}")
 	public User findById(@PathVariable Integer id) {
 		
 		return this.restTemplate.getForObject("http://springcloud-service/"+id, User.class);
+		
+	}
+	
+	//声明式Rest调用
+	@GetMapping("/users/{id}")
+	public User findByUserId(@PathVariable Integer id) {
+		
+		return userService.findByUserId(id);
 		
 	}
 	
