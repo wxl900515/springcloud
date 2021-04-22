@@ -11,6 +11,7 @@
 package com.wxl.app.service;
 
 import com.wxl.app.entity.User;
+import org.springframework.stereotype.Service;
 
 /**   
  * @ClassName:UserService   

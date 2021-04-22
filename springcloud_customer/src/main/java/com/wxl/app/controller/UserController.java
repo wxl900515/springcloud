@@ -20,6 +20,7 @@ public class UserController {
 	
 	@Autowired
 	private LoadBalancerClient   loadBalancerClient;
+
 	@Autowired
 	private UserService   userService;
 	
