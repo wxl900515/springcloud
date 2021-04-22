@@ -16,19 +16,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-	
-	@GetMapping("/{id}")
-	public User findById(@PathVariable Integer id) {
-		User us = new User();
-		us.setId(1);
-		us.setName("张三");
-		us.setAge(18);
-		us.setSex(0);
-		return us;
-	}
 
     @GetMapping("/{id}")
-    public User findByIds(@PathVariable Integer id) {
+    public User findById(@PathVariable Integer id) {
         return userService.findById(id);
     }
 }
